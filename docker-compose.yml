@@ -10,3 +10,6 @@ services:
     image: benit/stretch-php-7.1
     volumes:
       - ./index.php:/var/www/html/index.php
+    working_dir: /var/www/html/
+    ports:
+      - 8080:80

@@ -1,2 +1,2 @@
 <?php
-phpinfo();
+echo uniqid().PHP_EOL;

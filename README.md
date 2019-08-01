@@ -8,10 +8,14 @@ A basic test of varnish cache server as reverse proxy with an apache2 backend.
     
 ## Test
 
-### Send a request
+### Send a request via varnish
 
     curl http://localhost
+    
+### Send a request directly
+
+    curl http://localhost:8080
 
 ### Check if webserver has been accessed 
 
-    docker exec varnish_web_1 tail -f /var/log/apache2/access.log
+    docker exec varnish_web_1 tail  /var/log/apache2/access.log
