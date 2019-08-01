@@ -1,0 +1,12 @@
+version: "3"
+services:
+  cache:
+    image: varnish
+    volumes:
+      - ./default.vcl:/etc/varnish/default.vcl
+    ports:
+      - 80:80
+  web:
+    image: benit/stretch-php-7.1
+    volumes:
+      - ./index.php:/var/www/html/index.php
